@@ -8,7 +8,7 @@ int main() {
     for(int i=0;i<100;i++)
         arr[i] = 1;
 
-    // 🔴 WITHOUT SYNCHRONIZATION
+    // WITHOUT SYNCHRONIZATION
     sum = 0;
     start = omp_get_wtime();
 
@@ -21,7 +21,7 @@ int main() {
     printf("Without Sync Sum = %d, Time = %f\n", sum, end-start);
 
 
-    // 🟢 WITH CRITICAL
+    //  WITH CRITICAL
     sum = 0;
     start = omp_get_wtime();
 
@@ -35,7 +35,7 @@ int main() {
     printf("With Critical Sum = %d, Time = %f\n", sum, end-start);
 
 
-    // 🔵 WITH ATOMIC
+    //  WITH ATOMIC
     sum = 0;
     start = omp_get_wtime();
 
